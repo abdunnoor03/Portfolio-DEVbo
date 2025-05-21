@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Cairo", sans-serif;
+    background: #1f242d;
 }
 
 a {
@@ -255,6 +256,10 @@ h3 {
     margin: 0 auto 40px auto;
     max-width: 800px;
     transition: box-shadow 0.3s;
+    animation: show-content 1.5s linear forwards;
+    animation-delay: 1.6s;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .container:hover {
@@ -444,6 +449,12 @@ h3 {
         padding-top: 80px; /* add space for navbar */
         height: auto;
         text-align: center;
+    }
+    .home .home-info {
+        margin-bottom: 50px;
+    }
+    .home .home-info p {
+        width: 100%;
     }
     .home-img {
         order: 2;
