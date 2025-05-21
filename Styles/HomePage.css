@@ -337,128 +337,157 @@ h3 {
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
-    .contact form {
-        padding: 18px 8px;
+/* ...existing code... */
+
+/* Compact mobile navbar/sidebar */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 4%;
+        width: 100vw;
+        min-width: unset;
+        height: 60px;
+        margin: 0;
+        margin-left: 0;
+        border-radius: 0 0 24px 24px;
+        top: 0;
+        left: 0;
+        z-index: 200;
+        box-shadow: 0 2px 16px #7cf03d22;
+        background: #1f242d;
+        transition: height 0.3s;
+    }
+    .navbar .logo {
+        writing-mode: unset;
+        transform: none;
+        font-size: 22px;
+        margin: 0 0 0 48px;
+        padding: 0;
+        line-height: 1;
+    }
+    .navbar .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 14px;
+        left: 18px;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        z-index: 210;
+    }
+    .navbar .menu-toggle span,
+    .navbar .menu-toggle span:before,
+    .navbar .menu-toggle span:after {
+        display: block;
+        position: absolute;
+        width: 28px;
+        height: 4px;
+        background: #7cf03d;
+        border-radius: 2px;
+        transition: 0.3s;
+        content: '';
+    }
+    .navbar .menu-toggle span {
+        top: 14px;
+        left: 2px;
+    }
+    .navbar .menu-toggle span:before {
+        top: -10px;
+        left: 0;
+        content: '';
+    }
+    .navbar .menu-toggle span:after {
+        top: 10px;
+        left: 0;
+        content: '';
+    }
+    /* Hamburger to X */
+    .navbar.open .menu-toggle span {
+        background: transparent;
+    }
+    .navbar.open .menu-toggle span:before {
+        transform: translateY(10px) rotate(45deg);
+    }
+    .navbar.open .menu-toggle span:after {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+    /* Dropdown menu */
+    .navbar ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100vw;
+        background: #1f242d;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+        display: none;
+        border-radius: 0 0 24px 24px;
+        box-shadow: 0 4px 24px #7cf03d22;
+    }
+    .navbar ul.show {
+        display: flex;
+    }
+    .navbar ul li {
+        margin: 0;
+        width: 100%;
+    }
+    .navbar ul li a {
+        display: block;
+        padding: 16px 18px;
+        font-size: 18px;
+        border-radius: 0;
+        transition: background 0.2s, color 0.2s;
+    }
+    .navbar ul li a:hover, .navbar ul li.active a {
+        background: #232834;
+        color: #7cf03d;
     }
 }
 
-/* Responsive adjustments */
-@media (max-width: 1000px) {
+/* Hide hamburger on desktop */
+.menu-toggle {
+    display: none;
+}
+
+/* ...existing code... */
+
+/* ...existing code... */
+
+@media (max-width: 700px) {
+    /* ...existing navbar styles... */
+
     .home {
         flex-direction: column;
-        padding: 40px 4% 0;
+        align-items: flex-start;
+        padding-top: 80px; /* add space for navbar */
         height: auto;
         text-align: center;
     }
     .home-img {
-        margin-top: 32px;
-    }
-    .home-img .img-box {
-        width: 45vw;
-        height: 45vw;
-        min-width: 180px;
-        min-height: 180px;
-        max-width: 320px;
-        max-height: 320px;
-        margin: 0 auto;
-    }
-    .container {
-        padding: 32px 16px;
-        max-width: 98vw;
-    }
-}
-
-@media (max-width: 700px) {
-    .navbar {
-        flex-direction: column;
-        padding: 10px 4%;
-        width: 92%;
-        margin-left: 4%;
-    }
-    .navbar ul {
-        flex-direction: column;
+        order: 2;
         width: 100%;
-        align-items: flex-start;
-        gap: 8px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 24px auto;
     }
-    .navbar ul li {
-        margin-left: 0;
-    }
-    .home-info h1 {
-        font-size: 36px;
-    }
-    .home-info h2 {
-        font-size: 22px;
-    }
-    .about h2, .cv h2, .projects h2, .contact h2, .portfolio h2, .footer h2 {
-        font-size: 28px;
-    }
-    h3 {
-        font-size: 20px;
-    }
-    .container {
-        padding: 18px 4vw;
-    }
-}
-
-@media (max-width: 500px) {
     .home-img .img-box {
-        width: 80vw;
-        height: 80vw;
+        width: 60vw;
+        height: 60vw;
         min-width: 120px;
         min-height: 120px;
-        max-width: 90vw;
-        max-height: 90vw;
+        max-width: 320px;
+        max-height: 320px;
     }
-    .btn {
-        padding: 8px 18px;
-        font-size: 14px;
-    }
-    .container {
-        padding: 10px 2vw;
-    }
-    .contact form,
-    .contact-form {
-        padding: 10px 2vw;
-    }
-    .home-info p {
+    .home-info {
+        order: 1;
         width: 100%;
-        font-size: 14px;
+        margin: 0 auto;
     }
 }
 
-/* Ensure images and portfolio items scale */
-.portfolio-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: center;
-}
-.portfolio-item {
-    flex: 1 1 220px;
-    max-width: 320px;
-    background: #232834;
-    border-radius: 12px;
-    padding: 16px;
-    box-shadow: 0 2px 12px #7cf03d11;
-    text-align: center;
-}
-.portfolio-item img {
-    width: 100%;
-    max-width: 220px;
-    border-radius: 8px;
-    margin-bottom: 12px;
-}
-
-/* Footer responsive */
-.footer .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    text-align: center;
-}
-.footer-links {
-    margin-top: 8px;
-}
+/* ...existing code... */
