@@ -342,3 +342,123 @@ h3 {
         padding: 18px 8px;
     }
 }
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+    .home {
+        flex-direction: column;
+        padding: 40px 4% 0;
+        height: auto;
+        text-align: center;
+    }
+    .home-img {
+        margin-top: 32px;
+    }
+    .home-img .img-box {
+        width: 45vw;
+        height: 45vw;
+        min-width: 180px;
+        min-height: 180px;
+        max-width: 320px;
+        max-height: 320px;
+        margin: 0 auto;
+    }
+    .container {
+        padding: 32px 16px;
+        max-width: 98vw;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 4%;
+        width: 92%;
+        margin-left: 4%;
+    }
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .navbar ul li {
+        margin-left: 0;
+    }
+    .home-info h1 {
+        font-size: 36px;
+    }
+    .home-info h2 {
+        font-size: 22px;
+    }
+    .about h2, .cv h2, .projects h2, .contact h2, .portfolio h2, .footer h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .container {
+        padding: 18px 4vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .home-img .img-box {
+        width: 80vw;
+        height: 80vw;
+        min-width: 120px;
+        min-height: 120px;
+        max-width: 90vw;
+        max-height: 90vw;
+    }
+    .btn {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+    .container {
+        padding: 10px 2vw;
+    }
+    .contact form,
+    .contact-form {
+        padding: 10px 2vw;
+    }
+    .home-info p {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+/* Ensure images and portfolio items scale */
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+.portfolio-item {
+    flex: 1 1 220px;
+    max-width: 320px;
+    background: #232834;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 12px #7cf03d11;
+    text-align: center;
+}
+.portfolio-item img {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* Footer responsive */
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+.footer-links {
+    margin-top: 8px;
+}
