@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Reem+Kufi:wght@400..700&family=Share+Tech&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cairo", sans-serif;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.navbar {
+    position: fixed;
+    background: #1f242d;
+    border: 2px solid #7cf03d;
+    border-radius: 40px;
+    padding: 10px 9%;
+    width: 80%;
+    margin: 0 auto;
+    margin-left: 9%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s linear forwards;
+    animation-delay: 1.2s;
+}
+
+@keyframes show-content {
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-left: 10px;
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.5s ease;
+}
+
+.navbar ul li a:hover, .navbar ul li.active a {
+    color: #7cf03d;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s linear forwards;
+    animation-delay: 1.6s;
+}
+.about, .cv, .projects, .contact, .portfolio, .footer {
+    
+    color: #fff;
+    background: #1f242d;
+    padding: 60px 9%;
+}
+
+.about h2, .cv h2, .projects h2, .contact h2, .portfolio h2, .footer h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #7cf03d;
+}
+h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.home-info h1 {
+    font-size: 55px;
+}
+
+.home-info h2 {
+    display: inline-block;
+    font-size: 32px;
+    margin-top: -10px;
+}
+
+.home-info h2 span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: 0.7px #7cf03d;
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+
+@keyframes display-text {
+    25%,
+    100% {
+        display: none;
+    }
+}
+
+.home-info h2 span::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border-right: 2px solid #7cf03d;
+    color: #7cf03d;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+
+@keyframes fill-text {
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+.home-info p {
+    font-size: 16px;
+    margin: 10px 0 25px;
+    width: 80%;
+}
+
+.home-info .btn-sci {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #7cf03d;
+    border: 2px solid #7cf03d;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #7cf03d;
+    font-size: 16px;
+    color: #1f242d;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #7cf03d;
+    box-shadow: none;
+}
+
+.home-info .btn-sci .sci {
+    margin-left: 20px;
+}
+
+.home-info .btn-sci .sci a {
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid #7cf03d;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #7cf03d;
+    margin: 0 8px;
+    transition: 0.5s;
+}
+
+.home-info .btn-sci .sci a:hover {
+    background: #7cf03d;
+    color: #1f242d;
+    box-shadow: 0 0 10px #7cf03d;
+}
+
+.home-img .img-box {
+    position: relative;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.home-img .img-box::before, .home-img .img-box::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: conic-gradient(transparent, transparent, transparent, #7cf03d);
+    transform: rotate(0deg);
+    animation: rotate-border 10s linear infinite;
+}
+
+.home-img .img-box::after{
+    animation-delay: -5s;
+}
+
+@keyframes rotate-border {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.home-img .img-box .img-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 0.1px solid #1f242d;
+    background: #1f242d;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home-img .img-box .img-item img {
+    top: 10px;
+    position: absolute;
+    display: block;
+    width: 85%;
+    object-fit: cover;
+    mix-blend-mode: lighten;
+
+}
+
+.bars-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    z-index: -1;
+}
+
+.bars-animation .bar {
+    width: 100%;
+    height: 100%;
+    background: #1f242d;
+    transform: translateY(-100%);
+    animation: show-bars 0.5s ease-in-out forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes show-bars {
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.container {
+    background: rgba(31, 36, 45, 0.95); /* Slightly transparent dark */
+    border: 2px solid #7cf03d;
+    border-radius: 24px;
+    box-shadow: 0 4px 32px rgba(124, 240, 61, 0.08), 0 1.5px 0 #7cf03d inset;
+    padding: 40px 32px;
+    margin: 0 auto 40px auto;
+    max-width: 800px;
+    transition: box-shadow 0.3s;
+}
+
+.container:hover {
+    box-shadow: 0 8px 40px #7cf03d33, 0 1.5px 0 #7cf03d inset;
+}
+
+.container ul,
+.container ol {
+    padding-left: 24px;
+}
+
+.container li {
+    margin-bottom: 8px;
+}
+
+.container h2, .container h3 {
+    margin-top: 0;
+}
+
+/* ...existing code... */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: rgba(31, 36, 45, 0.98);
+    border-radius: 18px;
+    padding: 32px 24px;
+    box-shadow: 0 2px 16px #7cf03d22;
+    border: 1.5px solid #7cf03d44;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    background: #232834;
+    color: #fff;
+    border: 1.5px solid #7cf03d55;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+    resize: none;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border: 1.5px solid #7cf03d;
+    box-shadow: 0 0 8px #7cf03d44;
+}
+
+.contact button.btn {
+    align-self: flex-end;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .contact form {
+        padding: 18px 8px;
+    }
+}

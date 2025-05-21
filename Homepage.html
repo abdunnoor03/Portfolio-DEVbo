@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Styles/HomePage.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>DEVbo</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo" >DEVbo.</a>
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="bars-animation">
+        <div class="bar" style="--i:1;"></div>
+    </div>
+
+    <!-- home section -->
+    <section class="home">
+        <div class="home-info">
+            <h1>Abdunnoor Asseddique</h1>
+            <h2>I'm a <span style="--i:4;" data-text="Fontend Developer">Fontend Developer</span>
+                      <span style="--i:3"  data-text="UI UX Designer">UI UX Designer</span>
+                      <span style="--i:2"  data-text="IT Student">IT Student</span>
+                      <span style="--i:1"  data-text="Hardworker">Hardworker</span></h2>
+            <p>I'm a Frontend Developer with a passion for creating beautiful and functional web applications. I have experience in HTML, CSS, JavaScript, and various frontend frameworks.</p>
+            <div class="btn-sci">
+                <a href="#" class="btn">Download CV</a>
+                <div class="sci">
+                    <a href=""><i class='bx bxl-github'></i></a>
+                    <a href=""><i class='bx bxl-linkedin'></i></a>
+                    <a href=""><i class='bx bxl-twitter' ></i></a>
+                    <a href=""><i class='bx bxl-facebook' ></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="/Images/IMG_20250203_164816_732.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hello! I'm Abdunnoor Asseddique, a passionate frontend developer and designer based in Addis Ababa, Ethiopia. I love building interactive and user-friendly web applications. In my free time, I enjoy reading tech blogs and exploring new design trends.</p>
+            <ul>
+                <li><strong>Email:</strong> abdunnoor@email.com</li>
+                <li><strong>Phone:</strong> +251 900 000 000</li>
+                <li><strong>Location:</strong> Addis Ababa, Ethiopia</li>
+            </ul>
+        </div>
+    </section>
+    <!-- CV Section -->
+    <section id="cv" class="cv">
+        <div class="container">
+            <h2>Curriculum Vitae</h2>
+            <h3>Education</h3>
+            <ul>
+                <li>
+                    <strong>BSc in Information Technology</strong><br>
+                    Addis Ababa University, 2022 - Present
+                </li>
+                <li>
+                    <strong>High School Diploma</strong><br>
+                    Addis Ababa Science School, 2018 - 2022
+                </li>
+            </ul>
+            <h3>Experience</h3>
+            <ul>
+                <li>
+                    <strong>Frontend Developer Intern</strong> - Tech Solutions Ltd.<br>
+                    June 2024 - August 2024<br>
+                    <em>Worked on building responsive web interfaces using React and CSS.</em>
+                </li>
+                <li>
+                    <strong>Freelance Web Designer</strong><br>
+                    2023 - Present<br>
+                    <em>Designed and developed websites for small businesses and personal brands.</em>
+                </li>
+            </ul>
+            <h3>Skills</h3>
+            <ul class="skills">
+                <li>HTML5, CSS3, JavaScript</li>
+                <li>React, Vue.js</li>
+                <li>Figma, Adobe XD</li>
+                <li>Responsive Design</li>
+                <li>Git & GitHub</li>
+            </ul>
+            <a href="#" class="btn">Download CV (PDF)</a>
+        </div>
+    </section>
+        <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-items">
+                <div class="portfolio-item">
+                    <img src="/Images/portfolio1.png" alt="Project 1">
+                    <h4>Personal Blog</h4>
+                    <p>A modern blog platform built with React and Firebase.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="/Images/portfolio2.png" alt="Project 2">
+                    <h4>Business Landing Page</h4>
+                    <p>Responsive landing page for a local business using HTML, CSS, and JS.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="/Images/portfolio3.png" alt="Project 3">
+                    <h4>UI Kit</h4>
+                    <p>A collection of reusable UI components designed in Figma.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <strong>Weather App</strong> - A real-time weather application using OpenWeatherMap API.
+                </li>
+                <li>
+                    <strong>Task Manager</strong> - A productivity tool for managing daily tasks and to-dos.
+                </li>
+                <li>
+                    <strong>Portfolio Website</strong> - My personal website showcasing my work and skills.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Abdunnoor Asseddique. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
