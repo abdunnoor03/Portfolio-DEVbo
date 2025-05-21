@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles/HomePage.css">
+    <link rel="stylesheet" href="/Styles/HomePage.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>DEVbo</title>
 </head>
 <body>
     <nav class="navbar">
+        <div class="menu-toggle"><span></span></div>
+        <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('.navbar');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.navbar ul');
+    menuToggle.addEventListener('click', function() {
+        navbar.classList.toggle('open');
+        navList.classList.toggle('show');
+    });
+});
+</script>
         <a href="#" class="logo" >DEVbo.</a>
         <ul>
             <li class="active"><a href="#">Home</a></li>
@@ -18,7 +30,7 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
-    
+
     <!-- home section -->
     <section class="home">
         <div class="home-info">
@@ -41,7 +53,7 @@
         <div class="home-img">
             <div class="img-box">
                 <div class="img-item">
-                    <img src="Images/IMG_20250203_164816_732.png" alt="">
+                    <img src="/Images/IMG_20250203_164816_732.png" alt="">
                 </div>
             </div>
         </div>
