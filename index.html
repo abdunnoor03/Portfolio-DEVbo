@@ -44,6 +44,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // ...existing scroll/active code...
+
+    // Theme toggle logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const icon = themeToggle.querySelector('i');
+
+    // Set initial mode from localStorage
+    if (localStorage.getItem('theme') === 'light') {
+        body.classList.add('light-mode');
+        icon.classList.remove('bx-moon');
+        icon.classList.add('bx-sun');
+    }
+
+    themeToggle.addEventListener('click', function() {
+        body.classList.toggle('light-mode');
+        const isLight = body.classList.contains('light-mode');
+        icon.classList.toggle('bx-moon', !isLight);
+        icon.classList.toggle('bx-sun', isLight);
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+});
+</script>
         <a href="#" class="logo" >DEVbo.</a>
         <ul>
             <li class="active"><a href="#home">Home</a></li>
@@ -52,6 +78,9 @@ document.addEventListener('DOMContentLoaded', function() {
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <button id="theme-toggle" aria-label="Toggle light/dark mode">
+            <i class='bx bx-moon'></i>
+        </button>
     </nav>
 
     <!-- home section -->
