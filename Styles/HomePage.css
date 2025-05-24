@@ -319,6 +319,64 @@ h3 {
     cursor: pointer;
 }
 
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.portfolio-item {
+    background: #232834;
+    border: 2px solid #7cf03d33;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px #7cf03d11;
+    padding: 24px 18px 18px 18px;
+    max-width: 320px;
+    min-width: 220px;
+    text-align: center;
+    transition: box-shadow 0.3s, border 0.3s, transform 0.2s;
+}
+
+.portfolio-item:hover {
+    box-shadow: 0 6px 32px #7cf03d33;
+    border: 2px solid #7cf03d;
+    transform: translateY(-6px) scale(1.03);
+}
+
+.portfolio-item img {
+    width: 100%;
+    max-width: 260px;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #7cf03d22;
+    margin-bottom: 18px;
+    background: #1f242d;
+    box-shadow: 0 2px 12px #7cf03d11;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item:hover img {
+    border: 2px solid #7cf03d;
+    box-shadow: 0 4px 24px #7cf03d33;
+}
+
+.portfolio-item h4 {
+    color: #7cf03d;
+    font-size: 20px;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.portfolio-item p {
+    color: #b6ffb0;
+    font-size: 15px;
+    margin: 0;
+}
+
+
 /* ...existing code... */
 
 /* Compact mobile navbar/sidebar */
@@ -429,6 +487,19 @@ h3 {
         background: #232834;
         color: #7cf03d;
     }
+    .portfolio-items {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+    .portfolio-item {
+        max-width: 95vw;
+        min-width: 0;
+        padding: 16px 8px 12px 8px;
+    }
+    .portfolio-item img {
+        max-width: 90vw;
+    }
 }
 
 /* Hide hamburger on desktop */
@@ -482,5 +553,18 @@ h3 {
     .btn-sci .sci {
         margin-left: 0;
         margin-top: 50px;
+    }
+    .portfolio-items {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+    .portfolio-item {
+        max-width: 95vw;
+        min-width: 0;
+        padding: 16px 8px 12px 8px;
+    }
+    .portfolio-item img {
+        max-width: 90vw;
     }
 }
