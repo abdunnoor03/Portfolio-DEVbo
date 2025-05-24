@@ -441,23 +441,15 @@ h3 {
 /* ...existing code... */
 
 @media (max-width: 700px) {
-    /* ...existing navbar styles... */
-
     .home {
         flex-direction: column;
-        align-items: flex-start;
-        padding-top: 80px; /* add space for navbar */
+        align-items: center;
+        padding-top: 80px; /* space for navbar */
         height: auto;
         text-align: center;
     }
-    .home .home-info {
-        margin-bottom: 50px;
-    }
-    .home .home-info p {
-        width: 100%;
-    }
     .home-img {
-        order: 2;
+        order: 1;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -472,10 +464,23 @@ h3 {
         max-height: 320px;
     }
     .home-info {
-        order: 1;
+        order: 2;
         width: 100%;
         margin: 0 auto;
     }
-}
+    .home .home-info {
+        margin-bottom: 50px;
+    }
+    .home .home-info p {
+        width: 100%;
+    }
 
-/* ...existing code... */
+    .btn-sci {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-sci .sci {
+        margin-left: 0;
+        margin-top: 50px;
+    }
+}
